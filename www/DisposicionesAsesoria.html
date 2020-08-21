@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+
+	<head>		
+		<title>DISPOSICIONES ASESORIA LEGAL</title>
+		<meta charset="UTF-8" />
+		<link rel="icon"href= "favicon.ico">
+		
+		
+		<script>
+
+			window.onload = function(){
+
+				//---Función de realizar la búsqueda
+				function searchInText( word, html ) {
+
+				    //---Eliminar los spans
+				    html = html.replace(/<span class="finded">(.*?)<\/span>/g, "$1");
+
+				    //---Crear la expresión regular que buscará la palabra
+				    var reg = new RegExp(word.replace(/[\[\]\(\)\{\}\.\-\?\*\+]/, "\\$&"), "gi");
+				    var htmlreg = /<\/?(?:a|b|br|em|font|img|p|span|strong)[^>]*?\/?>/g;
+
+				    //---Añadir los spans
+				    var array;
+				    var htmlarray;
+				    var len = 0;
+				    var sum = 0;
+				    var pad = 28 + word.length;
+
+				    while ((array = reg.exec(html)) != null) {
+
+				    	htmlarray = htmlreg.exec(html);
+				 
+				    	//---Verificar si la búsqueda coincide con una etiqueta html
+				        if(htmlarray != null && htmlarray.index < array.index && htmlarray.index + htmlarray[0].length > array.index + word.length){
+
+			        		reg.lastIndex = htmlarray.index + htmlarray[0].length;
+
+			        		continue;
+
+			        	}
+
+			        	len = array.index + word.length;
+
+				        html = html.slice(0, array.index) + "<span class='finded'>" + html.slice(array.index, len) + "</span>" + html.slice(len, html.length);
+
+				        reg.lastIndex += pad;
+
+				        if(htmlarray != null) htmlreg.lastIndex = reg.lastIndex;
+				        
+				        sum++;
+
+				    }
+
+				    return {total: sum, html: html};
+
+				}
+
+				//---Al presionar el botón de buscar
+				document.getElementById("button").addEventListener("click", function(){
+
+					var search = document.getElementById("search").value;
+
+					if(search.length == 0) return;
+
+				    var props = searchInText( search, document.getElementById("content").innerHTML );
+				    
+				    document.getElementById("results").innerHTML = (props.total > 0) ? "Veces encontradas: " + props.total : "No se ha encontrado";
+				    
+				    if(props.total > 0) document.getElementById("content").innerHTML = props.html;
+
+				});
+
+			}
+
+		</script>
+	
+	<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+
+  
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 1.18in; margin-right: 1.18in; margin-top: 0.98in; margin-bottom: 0.98in }
+		P { margin-bottom: 0.08in; direction: ltr; widows: 2; orphans: 2 }
+		A:link { color: #0000ff; so-language: zxx }
+	-->
+	</STYLE>
+
+	</head>
+
+	
+<body lang=ES-MX style='tab-interval:36.0pt'>
+
+<div class="controls">
+      <input id="search" type="text" />
+      <button id="button">Buscar</button>
+      <span id="results"></span>
+    </div>
+
+    <div id="content">
+
+<div class=WordSection1>
+  <style> 
+
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic);
+
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.controls{
+  width: 100%;
+}
+
+#search{
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 5px;
+  width: 40%;
+}
+
+#button{
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 5px;
+}
+
+#results{
+  color: #990000;
+  font-size: 1em;
+  margin-left: 20px;
+}
+
+#content{
+  height: auto;
+  overflow: visible;
+}
+
+img.image{
+  margin: 0 20px 20px 0;
+}
+
+span.finded{
+  background: #F00;
+  color: #FFF;
+}
+
+</style>
+<P ALIGN=JUSTIFY STYLE="margin-top: 0.08in; margin-bottom: 0in; background: #ffffff; border-top: none; border-bottom: 1.50pt solid #000001; border-left: none; border-right: none; padding: 0in; line-height: 100%">
+<FONT COLOR=black><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Disposiciones Regulatorias de la Comisión Federal de Competencia Económica, para la calificación de&nbsp;información derivada de la asesoría legal
+proporcionada&nbsp;por los agentes económicos.</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo I</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Disposiciones Generales</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%"><A NAME="_GoBack"></A>
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+1.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Para
+efectos de estas Disposiciones Regulatorias, además de las
+definiciones contenidas en la&nbsp;Ley y en el Estatuto, se entiende
+por:</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Comité
+Calificador:</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;órgano
+encargado del estudio y resolución de una Solicitud de Calificación
+de la&nbsp;información susceptible de ser protegida, en los términos
+señalados en los artículos 2 y 3 de estas&nbsp;Disposiciones
+Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Procedimiento
+de Exclusión:</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;procedimiento
+a través del cual se excluye el archivo electrónico o se&nbsp;devuelve
+la información física que el Comité Calificador califique como
+protegida en términos de&nbsp;estas Disposiciones Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>III.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Procedimiento
+de Calificación:</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;procedimiento
+en el que el Comité Calificador analiza y resuelve la&nbsp;Solicitud
+de Calificación presentada por el Solicitante.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>IV.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Solicitante:</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;cualquier
+persona que realice una Solicitud de Calificación sobre información
+de la que&nbsp;es titular, en términos de estas Disposiciones
+Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.04in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>V.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Solicitud
+de Calificación:</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;escrito
+mediante el cual el Solicitante manifiesta que la información que&nbsp;ha
+proporcionado o ha obtenido la Comisión en un procedimiento de
+investigación o derivado del&nbsp;mismo es susceptible de ser
+protegida en los términos establecidos en estas
+Disposiciones&nbsp;Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+2.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;En
+los procedimientos señalados en estas Disposiciones Regulatorias, la
+Comisión no</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">considerará ni otorgará valor probatorio a aquella información en la que consten comunicaciones entre los&nbsp;Solicitantes y sus abogados cuando se acredite que dichas comunicaciones tienen como finalidad la obtención&nbsp;de asesoría legal. Los Solicitantes pueden autorizar expresamente a la Comisión el uso de la información&nbsp;referida, lo que se hará constar por escrito.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+3.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;Si
+en un mismo documento obrara información a la que se refiere el
+artículo anterior junto con&nbsp;información que no esté
+relacionada con asesoría legal al Solicitante, se excluirá aquella
+que se encuentre&nbsp;protegida en los términos de estas
+Disposiciones Regulatorias, cumpliendo en todo momento con
+las&nbsp;obligaciones en materia de transparencia y acceso a la
+información, a que hacen referencia los artículos 124 y&nbsp;125 de
+la Ley</FONT></FONT></FONT><SPAN STYLE="font-variant: small-caps"><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">.</FONT></FONT></FONT></SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo
+II</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Solicitud
+de Calificación</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo 4.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La
+Solicitud de Calificación debe dirigirse a la Dirección General a cargo del procedimiento en&nbsp;el que se actúa y presentarse en la Oficialía de Partes de la Comisión. La Solicitud de Calificación&nbsp;debe&nbsp;contener:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Nombre,
+denominación o razón social del Solicitante;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Nombre del representante legal, en su caso, y documento idóneo con el que
+acredite su&nbsp;personalidad;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>III.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Domicilio para oír y recibir notificaciones en la Ciudad de México, y
+personas autorizadas;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>IV.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La
+mención expresa de que se trata de una Solicitud de Calificación en
+los términos de estas&nbsp;Disposiciones Regulatorias, los datos de
+identificación del expediente en que se actúa, así como el&nbsp;acto
+o diligencia en el que se haya obtenido o proporcionado la
+información a la Comisión;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>V.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Descripción clara y precisa de la información que, a juicio del Solicitante, se
+encuentra dentro de los&nbsp;supuestos de protección establecidos en
+estas Disposiciones Regulatorias:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>a)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Tratándose de un archivo electrónico, se debe proporcionar la ruta del archivo,
+extensión del&nbsp;archivo, el nombre del archivo, el formato del
+archivo y demás datos que faciliten su localización&nbsp;y
+resguardo; así como el tipo del archivo (contrato, carta, correo
+electrónico, memorándum,&nbsp;informe, entre otros), nombre del
+autor, nombre del destinatario, fecha del archivo; materia
+del&nbsp;archivo y su descripción.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>b)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Tratándose de un documento físico, se debe señalar el tipo de documento (contrato, carta,&nbsp;correo electrónico, memorándum, informe, entre otros), así como el nombre del autor, nombre&nbsp;del destinatario, fecha del documento, título del documento; materia del documento y su&nbsp;descripción;&nbsp;así como cualquier otro elemento que permita relacionar al documento con su&nbsp;contenido.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>VI.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Descripción sucinta de la asesoría legal de la que forma parte la comunicación
+objeto de la Solicitud&nbsp;de Calificación, así como las razones por las cuales el Solicitante considera se trata de información&nbsp;sujeta a protección en términos de estas Disposiciones Regulatorias;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>VII.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Acreditar que el asesor legal que brinda la asesoría a que se refiere el artículo 2 de estas&nbsp;Disposiciones Regulatorias, se encuentra legalmente autorizado para ejercer la profesión de&nbsp;abogado o licenciado en Derecho, en términos de la legislación aplicable; y</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>VIII.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Los
+demás elementos que el Solicitante estime pertinentes.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Los elementos señalados en las fracciones V y VI deben entregarse en un
+sobre cerrado.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+5.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;Cuando
+en la tramitación de la investigación o de un procedimiento que
+derive de una&nbsp;investigación, un servidor público haya tenido a
+la vista información que pudiera estar sujeta a protección
+en&nbsp;términos de estas Disposiciones Regulatorias, debe
+informarlo al Director General a cargo del procedimiento a&nbsp;efecto
+de que se tomen las medidas de resguardo y protección de la
+información a que hace referencia el&nbsp;artículo 7 de estas
+Disposiciones Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Dentro
+de los cinco días siguientes a aquél en que haya sido informado, el
+Director General a cargo del&nbsp;procedimiento emitirá un acuerdo
+por el cual hará del conocimiento del titular de la información
+esta situación&nbsp;para que, dentro de los diez días siguientes
+contados a partir de la notificación de dicho acuerdo, acuda a
+las&nbsp;instalaciones de la Comisión a efecto de tener a la vista
+dicha información.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Una
+vez que haya tenido a la vista la información, el titular de la
+misma contará con un plazo de diez días&nbsp;para presentar la
+Solicitud de Calificación correspondiente, misma que será tramitada
+en términos del Capítulo&nbsp;IV de estas Disposiciones
+Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En
+caso de que no acuda a las instalaciones de la Comisión a efecto de
+tener a la vista la información o no</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">presente
+la Solicitud de Calificación en el plazo señalado, se entenderá
+que el titular de la información autoriza&nbsp;a la Comisión el uso
+de la información referida.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En
+el caso previsto en este artículo, el servidor público que haya
+tenido a la vista dicha información no&nbsp;podrá divulgarla;
+tampoco podrá seguir interviniendo en la sustanciación del
+procedimiento respectivo, hasta&nbsp;que se resuelva que&nbsp;la
+Solicitud de Calificación es infundada o se actualice lo señalado
+en el párrafo anterior.</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="text-indent: -0.06in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo
+III</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="text-indent: -0.06in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>De
+la integración del Comité Calificador</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo 6.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Existirán
+dos Comités Calificadores, cada uno integrado por tres miembros
+permanentes, que&nbsp;serán designados, mediante acuerdo, por el
+Titular de la Autoridad Investigadora, cuando se trate
+de&nbsp;procedimientos de investigación; o bien, por el Secretario
+Técnico, cuando se trate de procedimientos a cargo&nbsp;de la
+Secretaría Técnica derivados de una investigación. Los integrantes
+del Comité Calificador no podrán&nbsp;depender jerárquicamente
+entre sí y deben cumplir con los siguientes requisitos:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Ser parte de la Unidad Administrativa en donde radique el procedimiento
+en el que se actúa;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">No estar subordinado directa o indirectamente al Director General
+encargado del trámite del&nbsp;procedimiento en el que se actúa;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>III.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Tener
+un nivel jerárquico de Coordinador General o superior; y</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>IV.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Contar
+con cédula profesional que lo acredite como abogado o licenciado en
+Derecho, expedida en&nbsp;términos de la legislación aplicable.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">El
+Titular de la Autoridad Investigadora y el Secretario Técnico
+designarán a tres suplentes en cada&nbsp;Comité, según
+corresponda.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;&nbsp;&nbsp;Conforme a lo establecido en la fracción II de este artículo, si algún miembro del Comité estuviere&nbsp;subordinado directa o
+indirectamente al Director General encargado del trámite del
+procedimiento en el que se&nbsp;actúa, éste deberá ser suplido,
+por lo que, en su lugar, actuará alguno de los suplentes designados
+en cada&nbsp;Comité, según corresponda.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;&nbsp;&nbsp;Las deliberaciones del Comité deben contar con el voto de todos sus miembros y se tomarán por mayoría.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;&nbsp;&nbsp;El Comité será auxiliado por personal de la Dirección General de
+Inteligencia de Mercados cuando se&nbsp;requiera apoyo técnico
+forense para localizar y, en su caso, excluir la información del
+medio electrónico en&nbsp;que se encuentre almacenada.</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo IV</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Del Procedimiento para tramitar la Solicitud de Calificación</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+7.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;Una vez ingresada la Solicitud de Calificación, se tomarán las medidas de resguardo y&nbsp;protección de la información que resulten necesarias dependiendo de sus características, a efecto de que&nbsp;ningún funcionario de la Comisión, ajeno al Comité Calificador, pueda tener acceso a dicha información hasta&nbsp;en tanto se resuelva sobre su carácter de información protegida en términos de estas Disposiciones&nbsp;Regulatorias. Entre las medidas
+de resguardo que podrán tomarse estarán el embalaje y/o empaque de la&nbsp;información, su almacenamiento en un lugar seguro, y resguardo por servidores públicos ajenos a la&nbsp;tramitación de la investigación o procedimiento de que se trate, entre otras.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La presentación de la Solicitud de Calificación no suspenderá los
+plazos de la investigación o del&nbsp;procedimiento derivado de una
+investigación que corresponda.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+8.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">El
+Comité Calificador debe guardar secrecía de toda la información
+que sea sometida a su&nbsp;consideración con motivo de una Solicitud
+de Calificación, en el entendido de que dicho Comité es el
+único&nbsp;facultado para analizar la información referida,
+exclusivamente con el objeto de resolver la Solicitud de&nbsp;Calificación
+que le fue planteada. El incumplimiento a esta disposición se
+sancionará en términos de lo&nbsp;señalado en el último párrafo
+del artículo 55 del Estatuto</FONT></FONT></FONT><SPAN STYLE="font-variant: small-caps"><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">.</FONT></FONT></FONT></SPAN></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+9.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;El
+Procedimiento de Calificación debe sustanciarse conforme a lo
+siguiente:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Dentro de los cinco días siguientes a que se haya recibido la Solicitud de
+Calificación en la Oficialía&nbsp;de Partes, el Director General a
+cargo del procedimiento de que se trate remitirá la Solicitud
+de&nbsp;Calificación y los elementos que la acompañen al Titular de
+la Unidad en la que radique el expediente&nbsp;de que se trate.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Dentro de los cinco días siguientes a que el Titular de la Autoridad
+Investigadora o el Secretario&nbsp;Técnico haya recibido la
+Solicitud de Calificación y los elementos que la acompañen, deberá
+emitir&nbsp;un acuerdo en el que le remita la Solicitud de
+Calificación al Comité que corresponda a fin de que&nbsp;lleve a
+cabo el Procedimiento de Calificación. Dicho acuerdo se notificará
+por oficio al Comité y&nbsp;personalmente al Solicitante. Cuando la
+información haya quedado bajo resguardo de la Dirección&nbsp;General
+de Inteligencia de Mercados derivado de una visita de verificación,
+el Comité solicitará la&nbsp;remisión de la misma.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>III.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">El Comité analizará la Solicitud de Calificación y dentro de los diez
+días siguientes a aquél en que se&nbsp;le notifique el acuerdo a
+que hace referencia la fracción anterior, el cual podrá prorrogarse
+por un&nbsp;término igual cuando existan causas debidamente
+justificadas para ello, debe dictar un acuerdo que:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Admita la Solicitud de Calificación y señale fecha y hora para que se lleve a cabo la sesión&nbsp;del&nbsp;Comité Calificador en la que
+se determine si es fundada o infundada la Solicitud de Calificación;&nbsp;o</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Prevenga por única ocasión al Solicitante, cuando el escrito de Solicitud de Calificación omita&nbsp;alguno de los requisitos previstos en el artículo 4 de estas Disposiciones Regulatorias, para que&nbsp;la aclare o complete la Solicitud, dentro de un plazo no mayor a cinco días, que se podrá ampliar&nbsp;por única ocasión por un término igual en casos debidamente justificados.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Transcurrido el plazo sin que se desahogue la prevención o sin que se cumpla con
+los requisitos&nbsp;señalados en el artículo 4 de estas
+Disposiciones Regulatorias para la Solicitud de Calificación,
+ésta&nbsp;se tendrá por no presentada, sin perjuicio de que pueda
+presentarse por única ocasión una nueva&nbsp;Solicitud de
+Calificación.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Los
+acuerdos a que hace referencia esta fracción se notificarán personalmente.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La
+sesión a la que se refiere este artículo se llevará a cabo dentro
+de los veinte días siguientes a&nbsp;aquél en que surta efectos la
+notificación del acuerdo de admisión. Dicho plazo podrá
+prorrogarse por&nbsp;un término igual cuando existan causas
+debidamente justificadas para ello.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>IV.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Una
+vez analizada la Solicitud de Calificación, el Comité Calificador
+deliberará en forma colegiada y&nbsp;decidirá si dicha solicitud es
+fundada o infundada por cada archivo o documento que se analice:</FONT></FONT></FONT></P>
+
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En
+caso de que el Comité Calificador resuelva que la información es
+sujeta de protección en&nbsp;términos de estas Disposiciones
+Regulatorias, se ordenarán las medidas de resguardo que&nbsp;correspondan
+y las actuaciones establecidas en el Procedimiento de Exclusión a
+que refiere el&nbsp;Capítulo VI de estas Disposiciones Regulatorias;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En caso de que el Comité Calificador resuelva que la información no se encuentra dentro de los&nbsp;supuestos de protección establecidos en
+estas Disposiciones Regulatorias, se ordenará su&nbsp;remisión a la Dirección General encargada del procedimiento para que pueda disponer de la&nbsp;misma, sin perjuicio de que la Comisión aplique las medidas de apremio correspondientes y&nbsp;realice las
+diligencias necesarias para determinar si, al realizar la solicitud de calificación, el&nbsp;Solicitante incurrió en falsedad de declaraciones, en términos del artículo 127, fracción III,&nbsp;de la&nbsp;Ley.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>V.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La determinación que emita el Comité Calificador se notificará personalmente al Solicitante dentro de&nbsp;los diez días siguientes a la sesión correspondiente.</FONT></FONT></FONT></P>
+
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Hasta&nbsp;en tanto no se resuelva la Solicitud de Calificación en el sentido de que la información&nbsp;correspondiente no se encuentra dentro de
+los supuestos de protección establecidos en estas Disposiciones&nbsp;Regulatorias, el Director General encargado del procedimiento, así como los funcionarios adscritos a dicha&nbsp;Dirección General, no tendrán acceso a la información señalada por el
+Solicitante.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+10.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La determinación a que se refiere la fracción V del artículo 9 de estas Disposiciones&nbsp;Regulatorias debe contener al menos:</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;a.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Nombre, denominación o razón social del Solicitante;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;b.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Hora, día, mes y año de la sesión del Comité Calificador;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;c.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Datos de identificación del expediente en que se actúa, así como del acto o diligencia mediante&nbsp;la cual la Comisión obtuvo la información;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;d.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Nombre
+y datos de identificación de los funcionarios que formaron parte del
+Comité Calificador;</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;e.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">El análisis de la Solicitud de Calificación y la decisión
+correspondiente; y</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>&nbsp;&nbsp;&nbsp;f.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Las medidas de resguardo e inicio del Procedimiento de Exclusión, o en su caso, la remisión de&nbsp;la información respectiva al Director
+General encargado del procedimiento.</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo V</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Del procedimiento durante las visitas de verificación</B></FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo 11.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;En
+las visitas de verificación a las que hace referencia el artículo
+75 de la</FONT></FONT></FONT><SPAN STYLE="font-variant: small-caps"><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;</FONT></FONT></FONT></SPAN><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Ley, el visitado que&nbsp;desee solicitar la calificación de la información está sujeto a lo establecido en la fracción V de dicho
+artículo,&nbsp;de conformidad con lo siguiente:</FONT></FONT></FONT></P>
+
+
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Durante la práctica de la visita de verificación, el Agente Económico
+visitado o la persona con la que&nbsp;se entienda la diligencia,
+puede solicitar la protección de información por cada archivo o
+documento&nbsp;obtenido por esta Comisión en los términos de estas
+Disposiciones Regulatorias, cuya manifestación&nbsp;será asentada
+en el acta. En este caso, los servidores públicos autorizados para
+llevar a cabo la&nbsp;diligencia tomarán las medidas de resguardo y
+embalaje necesarios, en presencia del Agente&nbsp;Económico visitado
+o la persona con la que se entienda la diligencia, asentando tal
+situación&nbsp;en el&nbsp;acta.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Dicha
+información quedará bajo resguardo de la Dirección General de
+Inteligencia de Mercados, a&nbsp;efecto de que se tomen las medidas
+señaladas en el artículo 7 de estas Disposiciones Regulatorias.</FONT></FONT></FONT></P>
+
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Se informará al visitado que deberá presentar la Solicitud de
+Calificación dentro del plazo de veinte&nbsp;días siguientes a la
+fecha en que concluya la diligencia y se hubiere levantado el acta de
+visita, el&nbsp;cual podrá ser ampliado por única ocasión por un
+término igual, en casos debidamente justificados.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Si
+el visitado no hubiere solicitado la protección de la información
+obtenida durante la práctica de la visita de verificación, y
+con posterioridad considere que existe información que deba
+protegerse en términos de estas Disposiciones Regulatorias,
+deberá presentar la Solicitud de Calificación en el&nbsp;plazo
+referido en el párrafo anterior. Una vez que ingrese la Solicitud de
+Calificación, se iniciará el procedimiento a que hace
+referencia el Capítulo IV de estas Disposiciones Regulatorias.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En
+caso de que el visitado requiera copia de la información digital
+obtenida durante la visita de&nbsp;verificación para efectos de
+presentar la Solicitud de Calificación, el plazo a que se refiere
+esta&nbsp;fracción comenzará a correr a partir de que se haga
+entrega al visitado de la copia de la información,&nbsp;la cual
+deberá solicitarse a la Comisión dentro de los cinco días
+siguientes a la fecha en que&nbsp;concluya la diligencia y se hubiere
+levantado el acta de visita.</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Capítulo
+VI</B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Procedimiento
+de Exclusión</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Artículo
+12.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">En
+caso de que el Comité Calificador resuelva fundada la Solicitud de
+Calificación, se&nbsp;procederá conforme a lo siguiente:</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>I.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Si
+se tratara de información física, se ordenará su devolución y se
+pondrá a disposición del&nbsp;Solicitante en la Oficialía de
+Partes de la Comisión, manteniendo en todo momento las medidas
+de&nbsp;resguardo que correspondan.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: -0.3in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>II.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Si
+se trata de un archivo electrónico obtenido mediante una visita de
+verificación, el Comité&nbsp;Calificador ordenará la exclusión de
+dicho archivo, lo cual se hará constar en un acta&nbsp;circunstanciada.</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>TRANSITORIOS</B></FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>PRIMERO.&nbsp;</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Las
+presentes&nbsp;Disposiciones Regulatorias&nbsp;entrarán en vigor el
+día de su publicación en el&nbsp;Diario Oficial de la Federación y
+serán aplicables a los procedimientos en trámite a partir de su
+entrada&nbsp;en&nbsp;vigor.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<SPAN STYLE="font-variant: small-caps"><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>SEGUNDO.&nbsp;</B></FONT></FONT></FONT></SPAN><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Las
+personas que,&nbsp;previo a la entrada en vigor de estas
+Disposiciones Regulatorias hayan&nbsp;manifestado ante la
+Comisión&nbsp;que la información que
+hubieran&nbsp;proporcionado&nbsp;o&nbsp;hubiere&nbsp;obtenido la
+Comisión&nbsp;en un procedimiento de investigación o derivado del
+mismo,&nbsp;es susceptible de ser protegida&nbsp;en los
+términos&nbsp;de&nbsp;estas Disposiciones Regulatorias, podrán
+presentar una Solicitud de Calificación conforme a lo&nbsp;establecido&nbsp;en
+este ordenamiento, en un plazo no mayor a veinte días hábiles
+contados a partir del día hábil siguiente a su&nbsp;entrada en
+vigor, a fin de que se lleve a cabo el procedimiento a que hace
+referencia el Capítulo IV de estas&nbsp;Disposiciones Regulatorias y
+se determine lo conducente. En caso de que no se presente la
+Solicitud de&nbsp;Calificación dentro del plazo señalado, antes de
+que concluya la etapa en que se encuentre el
+expediente&nbsp;correspondiente, la Comisión llevará a cabo de
+oficio el procedimiento a que hace referencia el Capítulo IV
+de&nbsp;estas Disposiciones&nbsp;Regulatorias, a efecto de determinar
+lo conducente.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Publíquese.</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">&nbsp;Así
+lo acordó en la sesión de mérito el Pleno de la Comisión Federal
+de Competencia&nbsp;Económica por unanimidad de votos, de
+conformidad con lo dispuesto en el artículo 18 de la Ley Federal
+de&nbsp;Competencia Económica y los demás artículos citados en el
+presente acuerdo; ante la fe del Secretario&nbsp;Técnico, quien
+actúa con fundamento en los artículos 4, fracción IV, 18, 20,
+fracciones XXVI y XXVII del&nbsp;Estatuto Orgánico de la Comisión
+Federal de Competencia Económica.</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="text-indent: 0.2in; margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">La&nbsp;Comisionada
+Presidenta,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Alejandra
+Palacios Prieto</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">.-
+Rúbrica.- Los Comisionados:&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Jesús
+Ignacio&nbsp;Navarro Zermeño</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Brenda
+Gisela Hernández Ramírez</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>José
+Eduardo Mendoza Contreras</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Eduardo&nbsp;Martínez
+Chombo</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Alejandro
+Faya Rodríguez</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Gustavo
+Rodrigo Pérez Valdespín</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">.-
+Rúbricas.-&nbsp;El</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.06in; background: #ffffff; line-height: 100%">
+<FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">Secretario
+Técnico,&nbsp;</FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt"><B>Fidel
+Gerardo Sierra Aranda</B></FONT></FONT></FONT><FONT COLOR="black"><FONT FACE="Times New Roman, serif"><FONT SIZE=3 STYLE="font-size: 11pt">.-
+Rúbrica.</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+</BR>
+	</div>
+		</div>
+	</div>
+
+   <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-70316554-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+</body>
+</html>

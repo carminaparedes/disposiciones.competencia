@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+<meta charset="UTF-8"/>
+
+	<head>		
+		<title>Disposiciones Inmunidad</title>
+		<meta charset="UTF-8" />
+		
+		<link rel="icon"href= "favicon.ico">
+		<script>
+
+			window.onload = function(){
+
+				//---Función de realizar la búsqueda
+				function searchInText( word, html ) {
+
+				    //---Eliminar los spans
+				    html = html.replace(/<span class="finded">(.*?)<\/span>/g, "$1");
+
+				    //---Crear la expresión regular que buscará la palabra
+				    var reg = new RegExp(word.replace(/[\[\]\(\)\{\}\.\-\?\*\+]/, "\\$&"), "gi");
+				    var htmlreg = /<\/?(?:a|b|br|em|font|img|p|span|strong)[^>]*?\/?>/g;
+
+				    //---Añadir los spans
+				    var array;
+				    var htmlarray;
+				    var len = 0;
+				    var sum = 0;
+				    var pad = 28 + word.length;
+
+				    while ((array = reg.exec(html)) != null) {
+
+				    	htmlarray = htmlreg.exec(html);
+				 
+				    	//---Verificar si la búsqueda coincide con una etiqueta html
+				        if(htmlarray != null && htmlarray.index < array.index && htmlarray.index + htmlarray[0].length > array.index + word.length){
+
+			        		reg.lastIndex = htmlarray.index + htmlarray[0].length;
+
+			        		continue;
+
+			        	}
+
+			        	len = array.index + word.length;
+
+				        html = html.slice(0, array.index) + "<span class='finded'>" + html.slice(array.index, len) + "</span>" + html.slice(len, html.length);
+
+				        reg.lastIndex += pad;
+
+				        if(htmlarray != null) htmlreg.lastIndex = reg.lastIndex;
+				        
+				        sum++;
+
+				    }
+
+				    return {total: sum, html: html};
+
+				}
+
+				//---Al presionar el botón de buscar
+				document.getElementById("button").addEventListener("click", function(){
+
+					var search = document.getElementById("search").value;
+
+					if(search.length == 0) return;
+
+				    var props = searchInText( search, document.getElementById("content").innerHTML );
+				    
+				    document.getElementById("results").innerHTML = (props.total > 0) ? "Veces encontradas: " + props.total : "No se ha encontrado";
+				    
+				    if(props.total > 0) document.getElementById("content").innerHTML = props.html;
+
+				});
+
+			}
+
+		</script>
+
+		<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+
+
+
+  
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 1.18in; margin-right: 1.18in; margin-top: 0.98in; margin-bottom: 0.98in }
+		P { margin-bottom: 0.08in; direction: ltr; widows: 2; orphans: 2 }
+		A:link { color: #0000ff; so-language: zxx }
+	-->
+	</STYLE>
+
+
+</head>
+
+<body lang=ES-MX style='tab-interval:36.0pt'>
+
+<div class="controls">
+      <input id="search" type="text" />
+      <button id="button">Buscar</button>
+      <span id="results"></span>
+    </div>
+
+    <div id="content">
+
+<div class=WordSection1>
+  <style> 
+
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic);
+
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.controls{
+  width: 100%;
+}
+
+#search{
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 5px;
+  width: 40%;
+}
+
+#button{
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 5px;
+}
+
+#results{
+  color: #990000;
+  font-size: 1em;
+  margin-left: 20px;
+}
+
+#content{
+  height: auto;
+  overflow: visible;
+}
+
+img.image{
+  margin: 0 20px 20px 0;
+}
+
+span.finded{
+  background: #F00;
+  color: #FFF;
+}
+</style>
+
+<P ALIGN=JUSTIFY STYLE="margin-top: 0.08in; margin-bottom: 0in; background: #ffffff; border-top: none; border-bottom: 1.50pt solid #000001; border-left: none; border-right: none; padding: 0in; line-height: 100%">
+<FONT COLOR="#2f2f2f"><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>Disposiciones
+Regulatorias del Programa de Inmunidad y Reducción de Sanciones
+previsto en el artículo&nbsp;103 de la&nbsp;Ley
+Federal de Competencia Económica</A>&nbsp;y deroga los&nbsp;artículos
+114 a 116</A>&nbsp;de las Disposiciones&nbsp;Regulatorias de la&nbsp;Ley
+Federal de Competencia Económica</A>.</B></FONT></FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; font-variant: small-caps; line-height: 100%"><A NAME="_GoBack"></A>
+<BR><BR>
+</P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<SPAN STYLE="font-variant: small-caps"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>PRIMERO</B></FONT></FONT></SPAN><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.
+Se emiten las Disposiciones Regulatorias del Programa de Inmunidad y
+Reducción de Sanciones previsto en el artículo 103 de la Ley
+Federal de Competencia Económica.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 1. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>El
+presente instrumento tiene por objeto establecer las Disposiciones
+Regulatorias del artículo 103 de la Ley Federal de Competencia
+Económica.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 2. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Para
+los efectos de estas Disposiciones Regulatorias son aplicables las
+definiciones señaladas por la Ley y por el Estatuto.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 3. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>El
+procedimiento para solicitar el beneficio condicional a que se
+refiere el artículo 103 de la Ley, se tramitará de conformidad con
+lo siguiente:</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>I.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+El interesado debe realizar su solicitud por medio de correo de voz
+al número telefónico y/o correo electrónico que la Comisión
+indique para tal efecto en su sitio de Internet, en el cual señalará:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>a.
+La identidad del interesado;</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>b.
+La manifestación expresa de su voluntad de acogerse al beneficio;</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%">&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>c.
+Datos suficientes para que pueda establecerse contacto con el
+interesado o su representante con relación a su solicitud, al menos,
+nombre de la persona física o moral, teléfono y/o correo
+electrónico, domicilio en la Ciudad de México para oír y recibir
+notificaciones, y</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>d.
+El mercado o los mercados, incluyendo los bienes y/o servicios objeto
+de la solicitud.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Se
+entiende por interesado a cualquier agente económico que haya
+incurrido o esté incurriendo en una práctica monopólica absoluta;
+participe o haya participado directamente en prácticas monopólicas
+absolutas en representación o por cuenta y orden de personas
+morales; y el agente económico o individuo que coadyuve, propicie,
+induzca o haya coadyuvado, propiciado o inducido en la comisión de
+prácticas monopólicas absolutas.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>La
+solicitud que sea tramitada por medios distintos a los antes
+precisados se tendrá por no presentada, sin perjuicio de que pueda
+presentarse con posterioridad conforme a los medios señalados.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Las
+comunicaciones que el interesado realice posteriormente se harán
+directamente con la unidad administrativa responsable de la
+tramitación del beneficio de reducción de sanciones, sin ingresar
+por la oficialía de partes de la Comisión y con su número de
+clave.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>II.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Una vez recibido el mensaje por cualquiera de los medios válidos
+indicados anteriormente, el área responsable de la tramitación del
+beneficio de reducción de sanciones emitirá un acuerdo en el que
+ordenará informar la clave asignada al interesado. Dentro de los
+cinco días hábiles siguientes a aquel en que se recibió la
+solicitud, se informará al solicitante, a través de correo
+electrónico, el número de clave asignada, así como el día, hora y
+lugar en que debe acudir a una reunión, a efecto de que entregue la
+información y documentos con los que cuenta.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>En
+caso de que en la reunión el interesado actúe por conducto de un
+representante legal, éste deberá acreditar su personalidad en
+términos de la Ley y de sus Disposiciones Regulatorias.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>El
+interesado podrá solicitar, por única ocasión, el diferimiento de
+la fecha para entregar la información y documentos con los que
+cuenta, al menos tres días hábiles antes de la celebración de la
+reunión, por razones debidamente justificadas.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>El
+interesado debe identificar a las personas morales que formen parte
+de su grupo de interés económico que hubieren incurrido o estén
+incurriendo en las prácticas monopólicas absolutas y a los
+individuos que hayan participado directamente en las prácticas
+monopólicas absolutas, en su representación o por su cuenta y
+orden, de las que tenga conocimiento, que pretendan recibir el mismo
+beneficio de la reducción de sanción que le corresponda. Lo mismo
+aplicará para el agente económico o individuo que haya coadyuvado,
+propiciado, inducido o participado en la comisión de prácticas
+monopólicas absolutas. Estas personas estarán sujetas a las mismas
+obligaciones que el solicitante. En este caso, el interesado deberá
+nombrar a un representante común, señalando el domicilio en la
+Ciudad de México para oír y recibir notificaciones, su teléfono
+y/o correo electrónico. Toda notificación que se practique al
+representante común o a las personas que éste autorice se
+entenderán válidas para sus representados.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>En
+caso de no acudir a la reunión en la fecha y hora indicada, la
+Autoridad Investigadora, al día siguiente, cancelará la solicitud y
+la clave asignada, por lo que perderá la prelación que tenía
+frente a otros solicitantes. Lo anterior, sin perjuicio de que pueda
+presentar una nueva solicitud.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>III.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+La Autoridad Investigadora debe atender las solicitudes por orden de
+presentación y no debe evaluar alguna otra antes de haberse
+pronunciado sobre una anterior.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>IV.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Dentro del plazo de cuarenta días hábiles, contado a partir del día
+siguiente a que haya concluido la reunión a que hace referencia la
+fracción II, la Autoridad Investigadora revisará la información
+proporcionada a fin de determinar si cumple con lo establecido en el
+artículo 103 de la Ley. Este plazo podrá prorrogarse hasta por
+cuatro ocasiones, lo que se notificará personalmente al solicitante.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Durante
+este periodo, el solicitante deberá seguir aportando elementos que
+obren en su poder y de los que pueda disponer. La Autoridad
+Investigadora podrá solicitar aclaraciones sobre la información
+presentada, que deberán desahogarse por el solicitante.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>V</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.
+Si la información aportada por el solicitante cumple con lo
+establecido en el artículo 103 de la Ley, la Autoridad Investigadora
+emitirá un acuerdo condicional de inmunidad en el que indicará el
+orden cronológico de su petición y, en su caso, el porcentaje
+máximo de reducción de la multa permitido. En caso contrario, se
+notificará que la información aportada por el solicitante no cumple
+con lo establecido en el artículo 103 de la Ley y devolverá la
+información, por lo que la Autoridad </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Investigadora
+cancelará la solicitud y la clave asignada. En este último caso, el
+solicitante perderá la prelación que tenía frente a otros, por lo
+que el siguiente en orden cronológico ocupará la posición del
+solicitante a quien se le canceló la clave, previo cumplimiento de
+los requisitos establecidos en este artículo.</FONT></FONT></P>
+<P STYLE="text-indent: -0.3in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>VI</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.
+Los acuerdos que se emitan en términos de la fracción anterior se
+notificarán personalmente al solicitante. Cuando exista una
+investigación en curso, el acuerdo condicional de inmunidad se
+otorgará conforme al mercado que se investiga. En caso contrario, se
+otorgará considerando la información presentada por el solicitante
+y/o de la que se allegue la Comisión respecto del mercado objeto de
+la solicitud.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>La información
+aportada sólo será utilizada para los efectos previstos en el
+artículo 103 de la Ley, salvo lo establecido por el artículo 11 de
+las presentes Disposiciones.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 4. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Sólo
+se puede solicitar el beneficio previsto en el artículo 103 de la
+Ley hasta antes de la emisión del acuerdo de conclusión de la
+investigación.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 5. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Los
+individuos que reciban el beneficio establecido en el artículo 103
+de la Ley no serán inhabilitados en términos del artículo 127 de
+la Ley.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 6. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Para
+efectos de la fracción II del artículo 103 de la Ley, se entenderá
+como cooperación plena y continua, de manera enunciativa lo
+siguiente:</FONT></FONT></P>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>A. Durante la etapa
+de investigación:</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>I. Reconocer la
+participación en la práctica monopólica absoluta reportada;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>II. La terminación
+de la participación en la práctica monopólica absoluta reportada,
+reconocida e investigada. La Autoridad Investigadora podrá requerir
+al solicitante que no termine inmediatamente su participación en la
+misma para allegarse de información y documentos que estime
+necesarios para realizar su investigación, para lo cual deberá
+emitirse un acuerdo que haga constar dicha situación;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>III. Guardar la
+confidencialidad, salvo causa justificada, de la información que fue
+entregada a la Comisión en el trámite de su solicitud. La Autoridad
+Investigadora determinará los casos en los que exista causa
+justificada, previa solicitud de autorización del solicitante para
+no guardar confidencialidad de la información, sin perjuicio de lo
+establecido en el segundo párrafo del artículo 12 de estas
+Disposiciones Regulatorias;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>IV. La entrega en
+los plazos indicados, de toda la información y documentos que le
+sean requeridos en la investigación, a través de las distintas
+herramientas de investigación con que cuenta la Autoridad
+Investigadora;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>V. Permitir y
+cooperar en la realización de las diligencias y actuaciones de la
+Autoridad Investigadora;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>VI. Realizar las
+acciones que se encuentren a su alcance para asegurar la cooperación
+de las personas físicas o morales a que hace referencia la fracción
+II, párrafo cuarto del artículo 3 de estas Disposiciones;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>VII. No destruir,
+falsificar u ocultar información, y</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>VIII. Reportar todas
+las posibles prácticas monopólicas absolutas en las que haya
+participado o esté participando en el mercado a que hace referencia
+el artículo 3, fracción VI de estas Disposiciones, de las que tenga
+conocimiento;</FONT></FONT></P>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>B. Durante el
+procedimiento seguido en forma de juicio:</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>I. No negar su
+participación en la conducta respecto de la cual solicitó el
+beneficio;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>II. Aportar como
+pruebas la información y/o documentos supervenientes y cuyo desahogo
+sea útil para el procedimiento seguido en forma de juicio;</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>III. Permitir la
+realización de las diligencias y actuaciones de la Secretaría
+Técnica, y</FONT></FONT></P>
+<P STYLE="margin-left: 0.49in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>IV. No destruir,
+falsificar u ocultar información.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Las obligaciones de
+cooperación plena y continua serán aplicables tanto para el
+solicitante como para las personas morales que formen parte de su
+grupo de interés económico que hubieren incurrido en las prácticas
+monopólicas absolutas y los individuos que hayan participado
+directamente en las prácticas monopólicas absolutas, en su
+representación o por su cuenta y orden. Lo mismo aplicará para el
+agente económico o individuo que haya coadyuvado, propiciado o
+inducido la comisión de prácticas monopólicas absolutas.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;</P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Cuando del análisis
+de las acciones realizadas por el solicitante se determine la falta
+de cooperación de personas físicas identificables a quienes se
+había hecho extensivo el beneficio, se podrá excluir a esas
+personas del beneficio y mantenerlo para el resto de los
+beneficiarios. Cuando, por el contrario, las personas físicas a las
+que se haya hecho extensivo el beneficio hayan cooperado y el
+solicitante no haya cooperado, podrá considerarse a la persona
+física como sujeto de los beneficios como si los hubiera solicitado
+por sí mismo.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 7.
+</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Durante
+la investigación, previa autorización de la Autoridad
+Investigadora, en lugar de presentar documentación, el solicitante
+podrá realizar declaraciones orales consistentes en una descripción
+detallada sobre las circunstancias de tiempo, modo y lugar en las que
+se dieron las prácticas monopólicas absolutas, lo cual se asentará
+de forma exacta en el acta respectiva, la cual será firmada por el
+solicitante o su representante legal. Los demás elementos que
+sustenten lo señalado por el solicitante deberán presentarse por
+escrito y/o en físico.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 8. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Al
+emitir la resolución del procedimiento seguido en forma de juicio,
+el Pleno de la Comisión podrá revocar el beneficio condicional de
+reducción de sanciones ante el incumplimiento del solicitante de las
+obligaciones que establece el artículo 103 de la Ley.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>En caso de que se
+revoque el beneficio condicional de reducción de sanciones a un
+solicitante, los solicitantes posteriores mantendrán las posiciones
+que hubieran obtenido conforme al orden cronológico de su solicitud,
+por lo que no se recorrerán dichas posiciones.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 9.
+</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Cuando
+el solicitante, o las personas a que se refiere el penúltimo párrafo
+del artículo 6, no cumplan con las obligaciones que establece el
+artículo 103 de la Ley y el artículo 6, inciso A de estas
+Disposiciones Regulatorias durante la etapa de investigación, la
+Autoridad Investigadora hará de su conocimiento que recomendará al
+Pleno que no le sea otorgado en definitiva el beneficio a que se
+refiere el artículo 103 de la Ley. Para esos efectos, la Autoridad
+Investigadora informará al Pleno los elementos que demuestren la
+falta de cooperación de las personas señaladas, así como las
+repercusiones que tal situación tuvo para la investigación
+correspondiente.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>El informe a que se
+refiere este artículo podrá realizarse desde que la Autoridad
+Investigadora emita el dictamen a que se refiere el artículo 78,
+fracción I de la Ley y hasta que concluya el plazo para presentar
+alegatos.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 10.
+</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Iniciado
+el procedimiento seguido en forma de juicio, y hasta la integración
+del expediente, en caso de que el Secretario Técnico observe actos u
+omisiones que pudieran implicar un incumplimiento con los requisitos
+a los que se refiere el artículo 103 de la Ley y el artículo 6,
+inciso B de estas Disposiciones Regulatorias durante el procedimiento
+seguido en forma de juicio, emitirá un acuerdo mediante el cual hará
+dicha situación del conocimiento del agente económico de que se
+trate, con el fin de que este último pueda, dentro del plazo de diez
+días hábiles contados a partir de que surta efectos la notificación
+del acuerdo señalado, realizar aclaraciones o actuaciones para
+subsanar el incumplimiento, en caso de que sea subsanable.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>En caso de que no
+sea subsanado el incumplimiento señalado en el párrafo anterior, el
+Pleno, al dictar su resolución, podrá revocar el beneficio
+condicional al agente económico correspondiente.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 11. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>En
+caso de que la Comisión revoque el beneficio condicional de
+reducción de sanciones por incumplir con las obligaciones que
+establece el artículo 103 de la Ley, la Comisión podrá utilizar la
+información provista por el solicitante en la investigación y, en
+su caso, en la resolución correspondiente.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 12. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>La
+Comisión deberá mantener la confidencialidad de la identidad de los
+solicitantes. En todo momento, la Autoridad Investigadora tendrá
+bajo su resguardo el expediente que se integre para tramitar el
+procedimiento relativo al beneficio de reducción de sanciones, el
+cual podrá ser consultado por el solicitante.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>El solicitante podrá
+solicitar a la Autoridad Investigadora o al Secretario Técnico,
+según sea el caso, hacer del conocimiento público su adhesión al
+beneficio establecido en el artículo 103 de la Ley. La Autoridad
+Investigadora o el Secretario Técnico, según corresponda, podrán
+autorizar que se haga pública esa adhesión cuando ello no
+obstaculice el ejercicio de las facultades de la Comisión.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 13.
+</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Para
+dictar la resolución a que se refiere el párrafo segundo del
+artículo 103 de la Ley y en caso de que el Pleno considere
+procedente la reducción de la sanción correspondiente, se tomará
+en cuenta el orden cronológico de la presentación de la solicitud y
+el cumplimiento de las obligaciones a que hace referencia el artículo
+103 de la Ley por parte del solicitante en la sustanciación de la
+investigación y en el procedimiento seguido en forma de juicio.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;</P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>SEGUNDO. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Se
+derogan los artículos 114 a 116 de las Disposiciones Regulatorias de
+la Ley Federal de Competencia Económica, para quedar como sigue:</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 114.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Se deroga.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 115.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Se deroga.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Artículo 116.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Se deroga.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.07in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>TRANSITORIOS</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>PRIMERO. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>El
+presente Acuerdo entrará en vigor al día siguiente de su
+publicación en el Diario Oficial de la Federación.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>SEGUNDO. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Los
+procedimientos relativos al beneficio de reducción de sanciones que
+se encuentren en trámite a la entrada en vigor del presente acuerdo,
+se sustanciarán conforme a las Disposiciones Regulatorias vigentes
+al momento de su inicio.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>TERCERO. </B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>En
+caso de que en una investigación en trámite se presenten
+solicitudes del beneficio de reducción de sanciones con
+posterioridad a la entrada en vigor de estas Disposiciones
+Regulatorias, éstas se sustanciarán conforme a las Disposiciones
+Regulatorias vigentes al momento del inicio de la investigación.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Publíquese.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+Así lo acordó en la sesión de mérito el Pleno de la Comisión
+Federal de Competencia Económica por unanimidad de votos, de
+conformidad con lo dispuesto en el artículo 18 de la Ley Federal de
+Competencia Económica y los demás artículos citados en el presente
+acuerdo; ante la fe del Secretario Técnico, quien actúa con
+fundamento en los artículos 4, fracción IV, 18, 20, fracciones XXVI
+y XXVII del Estatuto.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>La Comisionada
+Presidenta, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Alejandra
+Palacios Prieto</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.-
+Rúbrica.- Los Comisionados: </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Jesús
+Ignacio Navarro Zermeño</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>,
+</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Eduardo
+Martínez Chombo</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>,
+</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Brenda
+Gisela Hernández Ramírez</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>,
+</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Alejandro
+Faya Rodríguez</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>,
+</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>José
+Eduardo Mendoza Contreras</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>,
+</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Gustavo
+Rodrigo Pérez Valdespín</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.-
+Rúbricas.- El Secretario Técnico, </FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Fidel
+Gerardo Sierra Aranda</B></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>.-
+Rúbrica.</FONT></FONT></P>
+<P STYLE="text-indent: 0.2in; margin-bottom: 0.07in; line-height: 100%">
+&nbsp;</P>
+<P STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+</BODY>
+
+
+
+	</div>
+
+	
+			</div>
+	    
+	    </div>
+
+	    <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-70316554-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	</body>
+	
+</html>
+
+
+
